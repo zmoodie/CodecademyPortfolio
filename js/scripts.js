@@ -1,3 +1,4 @@
+/* Sticky Header on Scroll */
 
 const body = document.body;
 let lastScroll = 0;
@@ -5,7 +6,7 @@ let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
+    if (currentScroll <= 100) {
         body.classList.remove("scroll-up");
         return;
     }
@@ -22,4 +23,20 @@ window.addEventListener("scroll", () => {
     }
     lastScroll = currentScroll;
     console.log(currentScroll);
+});
+
+/* Back to Top Button */
+var btn = $('#back-to-top');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
 });
