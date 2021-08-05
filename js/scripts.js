@@ -22,7 +22,6 @@ window.addEventListener("scroll", () => {
         body.classList.add("scroll-up");
     }
     lastScroll = currentScroll;
-    console.log(currentScroll);
 });
 
 
@@ -32,7 +31,7 @@ var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
+    this.period = parseInt(period, 10) || 1000;
     this.txt = '';
     this.tick();
     this.isDeleting = false;
@@ -51,7 +50,7 @@ TxtType.prototype.tick = function() {
     this.el.innerHTML = '<span class="type-container">'+this.txt+'</span>';
 
     var that = this;
-    var delta = 150 - Math.random() * 100;
+    var delta = 120 - Math.random() * 100;
 
     if (this.isDeleting) { delta /= 2; }
 
@@ -61,7 +60,7 @@ TxtType.prototype.tick = function() {
     } else if (this.isDeleting && this.txt === '') {
     this.isDeleting = false;
     this.loopNum++;
-    delta = 1000;
+    delta = 500;
     }
 
     setTimeout(function() {
