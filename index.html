@@ -36,11 +36,7 @@
             <div class="hero-wrap">
                 <div class="cta">
                     <h1>Zach Moodie</h1>
-                    <h2>
-                        <a href="" class="typewrite" data-period="2000" data-type='[ "Web Designer.", "Front-End Web Developer.", "Back-End Web Developer.", "Full-Stack Unicorn." ]'>
-                        <span class="type-container"></span>
-                        </a>
-                    </h2>
+                    <h2>Web&nbsp;Designer. Web&nbsp;Developer.<br>Full-Stack Unicorn.</h2>
                     <a class="button" href="#projects">View My Projects</a>
                 </div>
             </div>
@@ -57,42 +53,42 @@
             <div class="projects-wrap">
                 <h2>Projects</h2>
                 <div class="projects">
-                    <div class="project-card">
+                    <div class="project-card project-1">
                         <div class="project-img"></div>
                         <div class="project-desc">
                             <h3>Project 1</h3>
                             <h4>Client Name</h4>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card project-2">
                         <div class="project-img"></div>
                         <div class="project-desc">
                             <h3>Project 2</h3>
                             <h4>Client Name</h4>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card project-3">
                         <div class="project-img"></div>
                         <div class="project-desc">
                             <h3>Project 3</h3>
                             <h4>Client Name</h4>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card project-4">
                         <div class="project-img"></div>
                         <div class="project-desc">
                             <h3>Project 4</h3>
                             <h4>Client Name</h4>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card project-5">
                         <div class="project-img"></div>
                         <div class="project-desc">
                             <h3>Project 5</h3>
                             <h4>Client Name</h4>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card project-6">
                         <div class="project-img"></div>
                         <div class="project-desc">
                             <h3>Project 6</h3>
@@ -105,6 +101,9 @@
 
         <section id="about">
             <div class="about-wrap">
+                <div class="about-img">
+                    <img src="images/portfolio-tn.jpg">
+                </div>
                 <div class="about-desc">
                     <h2>About Me</h2>
                     <p>My name is Zach, a <span class="fun-focus">Web Designer</span> & <span class="fun-focus">Full-Stack Web Developer</span> from Alberta, Canada. I have been creating for the web for the past <span class="fun-focus">14 years</span>. Learning new skills and languages is one of my favorite things to do.</p>
@@ -122,6 +121,8 @@
                     <div class="skill-logo css3"><i class="fab fa-css3-alt"></i></div>
                     <div class="skill-logo js"><i class="fab fa-js"></i></div>
                     <div class="skill-logo sass"><i class="fab fa-sass"></i></div>
+                    <div class="skill-logo git"><i class="fab fa-git"></i></div>
+                    <div class="skill-logo npm"><i class="fab fa-npm"></i></div>
                     <div class="skill-logo react"><i class="fab fa-react"></i></div>
                     <div class="skill-logo github"><i class="fab fa-github"></i></div>
                 </div>
@@ -135,12 +136,16 @@
                     <div class="contact-form">
                         <form>
                             <div class="form-row">
-                                <input type="text" id="name" name="name" placeholder="Name" aria-label="Name">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-row">
+                                <label for="email">Email</label>
                                 <input type="email" id="email" name="email" placeholder="Email" aria-label="Email">
                             </div>
                             <div class="form-row">
-                                <select>
-                                    <option value="" disabled selected>Reason for contacting</option>
+                                <label for="reason">Reason for Contacting</label>
+                                <select id="reason">
                                     <option>Option 1</option>
                                     <option>Option 2</option>
                                     <option>Option 3</option>
@@ -149,12 +154,24 @@
                                 </select>
                             </div>
                             <div class="form-row">
-                                <textarea resize="none" placeholder="What can I do for you?"></textarea>
+                                <label for="message">Your Message</label>
+                                <textarea resize="none" id="message" name="message" placeholder="What can I do for you?"></textarea>
+                            </div>
+                            <div class="form-row send">
+                                <button class="submit" type="submit">Send <i class="fas fa-paper-plane"></i></button>
                             </div>
                         </form>
                     </div>
                     <div class="contact-info">
-                        Info
+                        <h3>Social Channels</h3>
+                        <div class="social-icons">
+                            <div class="social instagram">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="social github">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,7 +179,7 @@
     </main>
     <footer>
         <div class="footer-wrap">
-            <p>&copy; Copyright <script>document.write(new Date().getFullYear())</script> - Zach Moodie</p>
+            <span>&copy; Copyright <script>document.write(new Date().getFullYear())</script> - Zach Moodie</span>
         </div>
     </footer>
     
